@@ -32,12 +32,13 @@ p {
 .anfahrt {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    text-align: center;
 }
 
 .anfahrtChild {
-    justify-content: center;
-    padding: 1%
+    flex: 33%;
+    padding: 5px;
+    
 }
 
 /*NAVBAR START*/
