@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: monoton;
+    src: url("../fonts/monoton/Monoton-Regular.ttf");
+}
+
+html {
+    background-color: lightgrey;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.navbar h1 {
+    font-family: monoton;
+}
+
+.logo {
+    display: flex;
+    justify-content: left;
+}
+
+.logo h1 {
+    padding-left: 15px;
+    padding-top: 5%;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.bottombar {
+    overflow: hidden;
+    background-color: #333;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    align-items: flex-start;
+}
+
+.bottombar ul {
+    margin: 0;
+    justify-content: center;
+    display: flex;
+}
+
+.bottombar li {
+    color: white;
+    list-style: none;
+    padding: 0.5% 1% 0%;
+}
+
+.bottombar li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 0.25rem;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/*GALLERY START*/
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.gallery a img {
+    border-radius: 20px;
+    padding: 5px;
+}
+/*GALLERY END*/
+
+@media (max-width: 1165px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
