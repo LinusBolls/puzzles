@@ -18,6 +18,18 @@ body {
     padding: 0;
 }
 
+h1 {
+    border-top: 2px solid black;
+    padding: 10px;
+    text-align: center;
+    font-family: monoton;
+}
+
+p {
+    padding: 30px
+}
+
+/*NAVBAR START*/
 .navbar {
     
     display: flex;
@@ -35,11 +47,13 @@ body {
 .logo {
     display: flex;
     justify-content: left;
+    padding-left: 20px;
 }
 
 .logo h1 {
     padding-left: 15px;
-    padding-top: 5%;
+    display: flex;
+    justify-content: center;
 }
 
 .navbar-links {
@@ -67,6 +81,26 @@ body {
     background-color: #555;
 }
 
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/*NAVBAR STOP*/
+
+/*BOTTOMBAR START*/
 .bottombar {
     overflow: hidden;
     background-color: #333;
@@ -94,24 +128,7 @@ body {
     color: white;
     padding: 0.25rem;
 }
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
+/*BOTTOMBAR STOP*/
 
 /*GALLERY START*/
 .gallery {
