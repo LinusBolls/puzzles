@@ -9,6 +9,11 @@
     src: url("../fonts/Monoton/Monoton-Regular.ttf");
 }
 
+@font-face {
+    font-family: quicksand;
+    src: url("../fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+}
+
 html {
     background-color: lightgrey;
 }
@@ -25,33 +30,40 @@ h1 {
     font-family: monoton;
 }
 
+h2 {
+    font-family: quicksand;
+}
+
 p {
     padding-bottom: 30px;
     text-align: center;
+    font-family: quicksand;
 }
 
 /*ANFAHRT START*/
 .anfahrt {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
+    justify-content: center;
 }
 
-.anfahrt table tr td {
+.anfahrtChild p {
     text-align: left;
+    padding: 10px 75px;
+}
+/*ANFAHRT STOP*/
+
+/*ÖFFNUNGSZEITEN START*/
+.öffnungszeiten {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
-.anfahrtChild ul li{
-    list-style: none;
-    text-align: left;
+.öffnungszeitenChild {
+    padding: 10px 75px;
 }
-
-.anfahrtChild {
-    flex: 33%;
-    padding: 5px;
-    
-}
-/*ANFAHRT START*/
+/*ÖFFNUNGSZEITEN STOP*/
 
 /*NAVBAR START*/
 .navbar {
@@ -95,6 +107,7 @@ p {
 
 .navbar-links li {
     list-style: none;
+    font-family: quicksand;
 }
 
 .navbar-links li a {
@@ -132,7 +145,6 @@ p {
     overflow: hidden;
     background-color: #333;
     position: relative;
-    bottom: 0;
     width: 100%;
     align-items: flex-start;
 }
@@ -155,6 +167,11 @@ p {
     color: white;
     padding: 0.25rem;
 }
+
+.bottombarRight {
+    float: right;
+}
+
 /*BOTTOMBAR STOP*/
 
 /*GALLERY START*/
@@ -169,6 +186,19 @@ p {
     padding: 5px;
 }
 /*GALLERY END*/
+
+/*IMPRESSUM START*/
+.impressum p {
+    text-align: left;
+    padding: 10px 50px;
+}
+
+.datenschutz * {
+    font-family: quicksand;
+    text-align: left;
+    padding: 10px 50px;
+}
+/*IMPRESSUM END*/
 
 @media (max-width: 1165px) {
     .navbar {
