@@ -1,223 +1,107 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <script src="gallery/baguetteBox.min.js" async></script>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" href="media/logo.png">
-  <link rel="stylesheet" href="/gallery/baguetteBox.min.css">
-  <title>Puzzles</title>
-</head>
+  <head>
+    <link rel="stylesheet" href="/gallery/baguetteBox.min.css" />
+    <script src="/gallery/baguetteBox.min.js"></script>
+    <script src="/script.js"></script>
+    <link rel="stylesheet" href="/css/style.css"/>
+    <link rel="stylesheet" href="/css/flyout.css" />
+    <link rel="stylesheet" href="/css/button.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="shortcut icon" href="/gallery/logo.png" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Puzzles - Adult Entertainment Club</title>
+  </head>
   <body>
-
-    <!--NAVBAR START-->
-    <nav class="navbar" id="Startseite">
-      <div class="logo"><a href="#Startseite"><img src="media/logo.png" width="57" height="51"></a><h1>PUZZLES</h1></div> <!--Einzeln verschiedene Farben-->
-      <a href="#" class=
- "toggle-button">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
+    <div class="header">
+      <a href="/" class="header__logo"
+        ><img src="/gallery/logo.png" alt="Puzzles Logo"/>
+        <h2>PUZZLES</h2>
       </a>
-      <div class="navbar-links">
-        <ul>
-          <li><a href="#Startseite">Startseite</a></li>
-          <li><a href="#Neuigkeiten">Neuigkeiten</a></li>
-          <li><a href="#Veranstaltungen">Veranstaltungen</a></li>
-          <li><a href="#Räumlichkeiten">Räumlichkeiten</a></li>
-          <li><a href="#Hausregel">Hausregel</a></li>
-          <li><a href="#Anfahrt">Anfahrt</a></li>
-          <li><a href="#Anfahrt">Preise</a></li>
-          <li><a href="#Anfahrt">Kontakt</a></li>
-          <li><a href="#Anfahrt">Öffnungszeiten</a></li>
-        </ul>
+      <navbar class="header__navbar">
+        <a href="/events">Events</a>
+        <a href="/anfahrt">Anfahrt</a>
+        <a href="/preise">Preise</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/zeiten">Öffnungszeiten</a>
+      </navbar>
+      <div class="header__menuButton">
+        <button class="button invis square icon menuButton">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
       </div>
-    </nav>
-    <!--NAVBAR STOP-->
-
-     <!--STARTSEITE START-->
-    <h1>Willkommen</h1>
-    <div class="startseite">
-       <div class="welcomeText">
-          <p>
-            Wir sind das neue PUZZLES, das viele von euch unter dem Namen "Mystery" kennen.
-            PUZZLES haben wir für euch so weit uns möglich war für euch schön gemacht.
-            Wir haben viele Vorlieben Berücksichtigt - von zart bis hart ;) <br>
-            Für euch zarten bieten wir Edle, gemütliche und romantische Athmosphären. <br>
-            Für euch harten bieten wir jede Menge um Fantasien auszuleben.
-          </p>
-       </div>
-    </div>
-    <!--STARTSEITE STOP-->
-
-    <!--NEUIGKEITEN START-->
-    <h1 id="Neuigkeiten">Neuigkeiten</h1>
-    <div class="neuigkeiten">
-      <div class="newsText">
-        <p>
-          Die Eröffnung folgt auf Grund der aktuellen Situation wie folgt auf der 2G Reglung. Das heißt, ihr müsst entweder
-          geimpft oder genesen sein. Dazu reicht eine einfache Bescheinigung oder der Impfausweis.
-        </p>
-        <p>
-          Es besteht keine Maskenpflicht, solange ihr sitzt und trinkt oder euch in den Zimmern vergnügt (tanzen zählt nicht dazu).
-        </p>
+      <div class="flyoutShadow"></div>
+      <div class="flyoutMenu flyoutMenu--closed">
+        <a href="/" class="logo"><img src="/gallery/logo.png" alt="Puzzles Logo"/></a>
+        <a href="/events">Events</a>
+        <a href="/anfahrt">Anfahrt</a>
+        <a href="/preise">Preise</a>
+        <a href="/kontakt">Kontakt</a>
+        <a href="/impressum">Impressum</a>
+        <a href="/zeiten">Öffnungszeiten</a>
+        <span class="copyright">© Linus Bolls 2021</span>
       </div>
     </div>
-    <!--NEUIGKEITEN STOP-->
-
-    <!--VERANSTALTUNGEN START-->
-    <h1 id="Veranstaltungen">Veranstaltungen</h1>
-    <div class="veranstaltungen">
-      <div class="eventsText">
-        <p>
-          Große Eröffnungs- und Willkommensparty am 25. September nach der 2G Regel <br>
-          <em><b>(OHNE NACHWEISE KEIN EINLASS)</b></em>
-        </p>
-    </div>
-    <!--VERANSTALTUNGEN STOP-->
-
-    <!--HAUSREGEL START-->
-    <h1 id="Hausregel">Hausregel</h1>
-    <div class="hausregel">
-      <div class="rulesText">
-        <p>Donec dictum ipsum eget justo ornare maximus. Ut volutpat eget neque et volutpat. Duis est odio, molestie auctor erat venenatis, lobortis tristique purus. Mauris sed lobortis nisi. In porta sagittis ipsum vel porta. Nunc cursus est enim, ut elementum ex rutrum quis. Duis in venenatis orci. Proin non elit aliquam, ullamcorper mauris sed, aliquet velit. Aenean eleifend sem mauris, venenatis facilisis diam varius eu. Duis at tellus sed elit posuere pulvinar non ac felis. Vivamus tempus in eros luctus consequat. Etiam consequat, elit imperdiet placerat placerat, dolor nibh aliquet ligula, nec molestie augue ligula vitae tellus. Aliquam hendrerit rhoncus nisi id rutrum. In lacinia tortor eget ante pulvinar, at aliquet nisi malesuada. Aenean volutpat ex purus, vitae rhoncus lacus eleifend sit amet. </p>
+    <div class="page">
+      <div class="welcomePanel">
+        <h1>Besser denn je</h1>
+        Wir sind das neue PUZZLES, das viele von euch unter dem Namen Mystery
+        kennen. <br />PUZZLES haben wir renoviert, schön gemacht und viele
+        Vorlieben berücksichtigt - von zart bis hart ;) </br>Für euch zarten bieten
+        wir edle, gemütliche und romantische Athmosphären. </br>Für euch harten
+        bieten wir jede Menge um Fantasien auszuleben.
       </div>
-    </div>
-    <!--HAUSREGEL STOP-->
-
-    <!--GALLERY-->
-    <h1 id="Räumlichkeiten">Räumlichkeiten</h1>
-    <div class="gallery">
-
-      <a href="gallery/img/img_5.jpg" data-caption="das Wohnzimmer">
-        <img src="gallery/img/img_5.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_7.jpg" data-caption="das Wohnzimmer">
-        <img src="gallery/img/img_7.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_8.jpg" data-caption="die Bar">
-        <img src="gallery/img/img_8.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_10.jpg" data-caption="die Bar">
-        <img src="gallery/img/img_10.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_11.jpg" data-caption="die Bar">
-        <img src="gallery/img/img_11.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_12.jpg" data-caption="die Bar">
-        <img src="gallery/img/img_12.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_17.jpg" data-caption="der Massagestuhl">
-        <img src="gallery/img/img_17.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_27.jpg" data-caption="Nether">
-        <img src="gallery/img/img_27.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_28.jpg" data-caption="Nether">
-        <img src="gallery/img/img_28.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_29.jpg" data-caption="Glory hole">
-        <img src="gallery/img/img_29.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_30.jpg" data-caption="Rosenzimmer">
-        <img src="gallery/img/img_30.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_18.jpg" data-caption="Blue light Bereich">
-        <img src="gallery/img/img_18.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-      
-      <a href="gallery/img/img_19.jpg" data-caption="Blue light Bereich">
-        <img src="gallery/img/img_19.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_20.jpg" data-caption="Blue light Bereich">
-        <img src="gallery/img/img_20.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_25.jpg" data-caption="Eingang zum Pilzzimmer">
-        <img src="gallery/img/img_25.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-      <a href="gallery/img/img_26.jpg" data-caption="Pilzzimmer">
-        <img src="gallery/img/img_26.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="200" height="300">
-      </a>
-
-      <a href="gallery/img/img_16.jpg" data-caption="der Umkleideraum">
-        <img src="gallery/img/img_16.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="200" height="300">
-      </a>
-
-      <a href="gallery/img/img_15.jpg" data-caption="der Umkleideraum">
-        <img src="gallery/img/img_15.jpg" alt="Dieses Bild kann nicht angezeigt werden..." width="300" height="200">
-      </a>
-
-
-    </div>
-    <!--GALLERY-->
-
-    <!--ÖFFNUNGSZEITEN START-->
-    <h1 id="Öffnungszeiten">Öffnungszeiten und Preise</h1>
-    <div class="öffnungszeiten">
-      <div class="öffnungszeitenChild">
-        <p>
-          Es gibt noch keine Öffnungszeiten
-        </p>
+      <div class="doubleContent">
+        <section>
+          <h2>News</h2>
+          Die Eröffnung folgt auf Grund der aktuellen Situation wie folgt auf
+          der 2G Reglung. Das heißt, ihr müsst entweder geimpft oder genesen
+          sein. Dazu reicht eine Bescheinigung, ein Impfausweis oder ein
+          Genesenenschein. Es besteht keine Maskenpflicht, solange ihr sitzt und
+          trinkt oder euch in den Zimmern vergnügt (tanzen zählt nicht dazu).
+          Hier könnt ihr das Hygienekonzept als PDF runterladen oder ansehen
+        </section>
+        <section>
+          <h2>Events</h2>
+          Große Eröffnungs- und Willkommensparty am 01. und 02. Oktober nach
+          der 2G Regel (OHNE NACHWEIS KEIN EINLASS!)
+        </section>
       </div>
-      <div class="öffnungszeitenChild">
-        <p>
-          Es gibt noch keine Preise
-        </p>
-      </div>
-    </div>
-    <!--ÖFFNUNGSZEITEN STOP-->
-
-    <!--ANFAHRT START-->
-    <h1 id="Anfahrt">Anfahrt und Kontakt</h1>
-    <div class="anfahrt">
-      <div class="anfahrtChild">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.8039497624495!2d9.980243015667442!3d53.471963780005524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b191c82a490b0f%3A0xb489202d8ede8296!2sLauenbruch%20Ost%201%2C%2021079%20Hamburg!5e0!3m2!1sen!2sde!4v1629901855627!5m2!1sen!2sde" width="400" height="300" style="border:0; border-radius: 20px;" allowfullscreen="" loading="lazy"></iframe>
-      </div>
-      <div class="anfahrtChild">
-        <p>
+      <section class="content" style="top: 3rem">
+        <h2>Hausregel</h2>
+        Der oberste Grundsatz lautet: NEIN heißt NEIN! Wenn jemand etwas nicht
+        mag und bestimmte Praktiken und/oder Personen ablehnt, so ist das ohne
+        Diskussion zu respektieren. Wie in jedem guten Club wird auch bei uns
+        Körperhygiene groß geschrieben: Aus gegebenem Anlass weisen wir darauf
+        hin, dass es zwei Duschen gibt, die bitte auch benutzt werden sollten.
+        „Stinkmorcheln“ müssen mit Clubverweis rechnen. Niemand ist zum
+        Gruppensex verpflichtet: Paare dürfen sich durchaus auch nur mit sich
+        alleine vergnügen. Es liegen in allen Räumen Kondome bereit. Die
+        Benutzung von Kondomen ist dem Verantwortungsbewusstsein der Besucher
+        überlassen. Bitte die Gummis nach dem Gebrauch ordnungsgemäß entsorgen
+        (nicht einfach auf der Matte liegen lassen!). Im Spielwiesenbereich ist
+        aus Sicherheitsgründen das Rauchen verboten. Auch die Mitnahme von
+        Getränken in Flaschen oder Gläsern ist aus diesem Grund untersagt.
+        Dresscode versteht sich von selbst.
+      </section>
+      <div class="gallery"></div>
+      <div class="doubleContent googleMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.8039497624495!2d9.980243015667442!3d53.471963780005524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b191c82a490b0f%3A0xb489202d8ede8296!2sLauenbruch%20Ost%201%2C%2021079%20Hamburg!5e0!3m2!1sen!2sde!4v1629901855627!5m2!1sen!2sde" width="400" height="250" allowfullscreen="" loading="lazy"></iframe>
+        <section>
           <b>
         Verein für Kommunikation und Freizeitgestaltung e.V. <br>
         Lauenbruch Ost 1 <br>
         21079 Hamburg <br>
           </b>
-        </p>
-        <p>
           Vorstand: Süheyla Hancer <br>
           Telefon: <a href="tel:+4915170305185">+49 (0) 151 703 051 85</a><br>
           E-Mail: <a href="mailto:info@club-puzzles.de" target="_blank">info@club-puzzles.de</a>
-        </p>
+        </section>
       </div>
     </div>
-    <!--ANFAHRT STOP-->
-
-    <!--BOTTOMBAR START-->
-    <nav class="bottombar" id="Bottombar">
-        <ul>
-          <li><a href="/html/impressumDatenschutz.html">Impressum</a></li>
-          <li>|</li>
-          <li><a href="#Bottombar">©2021</a></li>
-          <li>|</li>
-          <li><a href="/html/impressumDatenschutz.html">Datenschutz</a></li>
-        </ul>
-      </nav>
-    <!--BOTTOMBAR STOP-->
-
-    <script src="script/script.js" defer></script>
   </body>
 </html>

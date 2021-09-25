@@ -1,234 +1,147 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+  --main: white;
+  --headerMain: #222;
+  --text: #444;
+  --headerText: #999;
+  --brightText: white;
+  --action0: rgb(155, 0, 0);
 }
-
 @font-face {
-    font-family: monoton;
-    src: url("../fonts/Monoton/Monoton-Regular.ttf");
+  font-family: monoton;
+  src: url("../fonts/Monoton/Monoton-Regular.ttf");
 }
-
 @font-face {
-    font-family: quicksand;
-    src: url("../fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
+  font-family: quicksand;
+  src: url("../fonts/Quicksand/Quicksand-VariableFont_wght.ttf");
 }
-
-html {
-    background-color: lightgrey;
-}
-
-body {
-    margin: 0;
-    padding-top: 65px;
-}
-
 h1 {
-    border-top: 2px solid black;
-    padding: 10px;
-    text-align: center;
-    font-family: monoton;
+  text-align: center;
+  font-family: monoton;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 2rem;
 }
-
 h2 {
-    font-family: quicksand;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 1rem;
 }
+html,
+body {
+  font-size: 100%;
+  font-family: Avenir;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--text);
 
-p {
-    padding-bottom: 30px;
-    text-align: center;
-    font-family: quicksand;
+  background: url("../gallery/img/img_30.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
-
-/*ANFAHRT START*/
-.anfahrt {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.welcomePanel {
+  background: var(--main);
+  border-radius: 0.5rem;
+  padding: 2rem 1rem;
+  position: relative;
+  margin: auto;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+  z-index: 5;
+  width: calc(100% - 4rem);
+  max-width: 60rem;
+  top: -7rem;
 }
-
-.anfahrtChild p {
-    text-align: left;
-    padding: 10px 75px;
+.page {
+  z-index: 5;
+  background: var(--main);
+  position: relative;
+  top: 67%;
+  box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
 }
-/*ANFAHRT STOP*/
-
-/*ÖFFNUNGSZEITEN START*/
-.öffnungszeiten {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.doubleContent {
+  position: relative;
+  width: calc(100% - 3rem);
+  max-width: 80rem;
+  margin: auto;
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-areas: "slot0 slot1";
 }
-
-.öffnungszeitenChild {
-    padding: 10px 75px;
+.doubleContent :nth-child(1) {
+  grid-area: slot0;
 }
-/*ÖFFNUNGSZEITEN STOP*/
-
-/*NAVBAR START*/
-.navbar {
-    display: flex;
-    position: fixed;
-    width: 100%;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #333;
-    color: white;
-    top: 0;
+.doubleContent :nth-child(2) {
+  grid-area: slot1;
 }
-
-.navbar h1 {
-    font-family: monoton;
+.doubleContent p {
+  margin: 0;
 }
-
-.logo {
-    display: flex;
-    justify-content: left;
-    padding-left: 20px;
+.doubleContent .header {
+  padding-top: 0;
 }
-
-.logo h1 {
-    padding-left: 15px;
-    display: flex;
-    justify-content: center;
-    color: red;
+.doubleContent img {
+  margin: auto;
+  width: 100%;
 }
-
-
-.navbar-links {
-    height: 100%;
+.content {
+  width: calc(100% - 4rem);
+  max-width: 30rem;
+  position: relative;
+  margin: auto;
 }
-
-.navbar-links ul {
-    display: flex;
-    margin: 0;
-    padding: 0;
+@media screen and (max-width: 46rem) {
+  .doubleContent {
+    grid-template-areas: "slot0" "slot1";
+  }
+  .doubleContent img {
+    width: 67% !important;
+  }
 }
-
-.navbar-links li {
-    list-style: none;
-    font-family: quicksand;
+.googleMap {
+  grid-gap: 1rem !important;
+  margin-top: 6rem !important;
 }
-
-.navbar-links li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 1rem;
+.googleMap iframe {
+  border: none;
+  border-radius: 0 !important;
+  position: relative !important;
+  margin: auto !important;
 }
-
-.navbar-links li:hover {
-    background-color: #555;
-}
-
-.toggle-button {
-    position: absolute;
-    top: .75rem;
-    right: 1rem;
-    display: none;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 30px;
-    height: 21px;
-}
-
-.toggle-button .bar {
-    height: 3px;
-    width: 100%;
-    background-color: white;
-    border-radius: 10px;
-}
-/*NAVBAR STOP*/
-
-/*BOTTOMBAR START*/
-.bottombar {
-    overflow: hidden;
-    background-color: #333;
-    position: relative;
-    width: 100%;
-    align-items: flex-start;
-}
-
-.bottombar ul {
-    margin: 0;
-    justify-content: center;
-    display: flex;
-}
-
-.bottombar li {
-    color: white;
-    list-style: none;
-    padding: 5px;
-}
-
-.bottombar li a {
-    display: block;
-    text-decoration: none;
-    color: white;
-    padding: 0.25rem;
-}
-
-.bottombarRight {
-    float: right;
-}
-
-/*BOTTOMBAR STOP*/
-
-/*GALLERY START*/
 .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  margin: auto;
+  width: calc(100% - 4rem);
+  max-width: 42rem;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5rem 0;
 }
-
-.gallery a img {
-    border-radius: 20px;
-    padding: 5px;
+.gallery__column {
+  flex: calc(100% / 3 - 1rem);
+  max-width: calc(100% / 3);
+  padding: 0 0.5rem;
 }
-/*GALLERY END*/
-
-/*IMPRESSUM START*/
-.impressum p {
-    text-align: left;
-    padding: 10px 50px;
+.gallery__column:first-child {
+  padding-left: 0;
 }
-
-.datenschutz * {
-    font-family: quicksand;
-    text-align: left;
-    padding: 10px 50px;
+.gallery__column:last-child {
+  padding-right: 0;
 }
-/*IMPRESSUM END*/
-
-@media (max-width: 1165px) {
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .toggle-button {
-        display: flex;
-    }
-
-    .navbar-links {
-        display: none;
-        width: 100%;
-    }
-
-    .navbar-links ul {
-        width: 100%;
-        flex-direction: column;
-    }
-
-    .navbar-links ul li {
-        text-align: center;
-    }
-
-    .navbar-links ul li a {
-        padding: .5rem 1rem;
-    }
-
-    .navbar-links.active {
-        display: flex;
-    }
+.gallery__column img {
+  vertical-align: middle;
+  width: 100%;
+  margin: 0.5rem 0;
+}
+@media screen and (max-width: 800px) {
+  .gallery__column {
+    flex: calc(50% - 1rem);
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 600px) {
+  .gallery__column {
+    flex: 100%;
+    max-width: 100%;
+  }
 }
