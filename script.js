@@ -45,11 +45,17 @@ window.addEventListener("load", () => {
       ["img_5.jpg", "Wohnzimmer"],
       ["img_18.jpg", "Blue Light Bereich"],
     ],
+    [
+      ["img_17.jpg", "Massagestuhl"],
+      ["img_15.jpg", "Umkleideraum"],
+      ["img_5.jpg", "Wohnzimmer"],
+      ["img_18.jpg", "Blue Light Bereich"],
+    ],
   ];
   document.querySelector(".gallery").innerHTML = galleryColumns
     .map(
-      column =>
-        "<div class='gallery__column'>" +
+      (column, index) =>
+        `<div class="gallery__column" style="grid-area: c${index}">` +
         column
           .map(
             ([path, desc]) =>
