@@ -5,6 +5,8 @@
   --headerText: #999;
   --brightText: white;
   --action0: rgb(155, 0, 0);
+
+  --sidePadding: 2rem;
 }
 @font-face {
   font-family: monoton;
@@ -49,7 +51,7 @@ body {
   margin: auto;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
   z-index: 5;
-  width: calc(100% - 4rem);
+  width: calc(100% - 2rem - var(--sidePadding));
   max-width: 60rem;
   top: -7rem;
 }
@@ -59,10 +61,11 @@ body {
   position: relative;
   top: 67%;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
+  padding-bottom: 5rem;
 }
 .doubleContent {
   position: relative;
-  width: calc(100% - 3rem);
+  width: calc(100% - var(--sidePadding));
   max-width: 80rem;
   margin: auto;
   display: grid;
@@ -86,7 +89,7 @@ body {
   width: 100%;
 }
 .content {
-  width: calc(100% - 4rem);
+  width: calc(100% - var(--sidePadding));
   max-width: 30rem;
   position: relative;
   margin: auto;
@@ -108,22 +111,23 @@ body {
   border-radius: 0 !important;
   position: relative !important;
   margin: auto !important;
+  width: 100%;
 }
 .gallery {
   padding-top: 5rem;
-  width: calc(100% - 4rem);
+  width: calc(100% - var(--sidePadding));
   max-width: 42rem;
   display: grid;
   margin: auto;
   grid-gap: 0.5rem;
   grid-template-areas: "c0 c1 c2 c3";
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 46rem) {
   .gallery {
     grid-template-areas: "c0 c1" "c2 c3";
   }
 }
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 36rem) {
   .gallery {
     grid-template-areas: "c0" "c1";
   }
