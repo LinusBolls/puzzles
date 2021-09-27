@@ -11,6 +11,9 @@
   --textMaxWidth: 32rem;
   --wideMaxWidth: 72rem;
 }
+*:not(h1) {
+  font-family: Avenir;
+}
 @font-face {
   font-family: monoton;
   src: url("../fonts/Monoton/Monoton-Regular.ttf");
@@ -94,9 +97,6 @@ body {
   ) !important;
   color: white !important;
 }
-/* .header {
-  position: absolute !important;
-} */
 footer {
   text-align: center;
   position: relative;
@@ -108,6 +108,22 @@ footer {
   border-bottom: 1px solid var(--text);
   margin: 5rem auto;
 }
+footer .copyright {
+  margin: 0.5rem 0;
+  padding: 0 1rem;
+}
+.flyoutMenu footer {
+  position: absolute;
+  bottom: -2rem;
+  left: calc(var(--sidePadding) / 2);
+}
+.flyoutMenu footer a {
+  color: var(--headerText) !important;
+  text-decoration: underline !important;
+}
+.flyoutMenu footer .copyright {
+  display: block;
+}
 @media screen and (min-width: 32rem) {
   .welcomePanel {
     --panelPadding: 5rem;
@@ -116,7 +132,6 @@ footer {
 @media screen and (max-width: 32rem) {
   footer .copyright {
     display: block;
-    margin: 0.5rem 0;
   }
   .welcomePanel {
     --panelPadding: 1rem;

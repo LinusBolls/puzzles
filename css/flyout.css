@@ -47,8 +47,8 @@
 
   top: 0;
   height: 50vh;
-  padding-top: calc(9rem + 10vh);
-  padding-bottom: calc(40vh - 9rem);
+  padding-top: calc(50vh - 13rem);
+  padding-bottom: 13rem;
   max-width: 20rem;
   background: var(--headerMain);
   width: 90vw;
@@ -78,7 +78,7 @@
 .flyoutMenu--closed * {
   display: none;
 }
-.flyoutMenu a:not(.logo) {
+.flyoutMenu > a:not(.logo) {
   color: var(--headerText) !important;
   height: 100%;
   display: flex;
@@ -87,12 +87,6 @@
 }
 .flyoutMenu a:hover {
   color: white !important;
-}
-.flyoutMenu .copyright {
-  position: absolute;
-  bottom: 2rem;
-  width: 100%;
-  text-align: center;
 }
 .flyoutMenu .logo {
   position: absolute;

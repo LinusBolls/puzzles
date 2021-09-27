@@ -15,7 +15,7 @@
 }
 @media screen and (max-width: 46rem) {
   .gallery {
-    grid-template-areas: "c0 c1" "c2 c3";
+    grid-template-areas: "c0 c2" "c3 c1";
   }
 }
 @media screen and (max-width: 36rem) {

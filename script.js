@@ -1,48 +1,46 @@
 (() => {
-  function initFooter() {
-    const footerEl = document.querySelector(`[js-data-slot="footer"]`);
-    if (!footerEl) return;
+  const navLinks = `<a href="/#events">Events</a>
+  <a href="/#anfahrt">Anfahrt</a>
+  <a href="/#preise">Preise</a>
+  <a href="/#kontakt">Kontakt</a>
+  <a href="/#zeiten">Öffnungszeiten</a>`;
 
-    footerEl.innerHTML += `<a href="/impressum.html#impressum">Impressum</a>
-    <span class="copyright" style="padding: 0 2rem"
-      >© Linus Bolls 2021</span
-    >
-    <a href="/impressum.html#datenschutz">Datenschutz</a>`;
+  const fillSlot = (query, template) => {
+    const els = document.querySelectorAll(query);
+    els.forEach(el => (el.innerHTML = template));
+    return els.length > 0 ? true : false;
+  };
+  function initFooter() {
+    fillSlot(
+      `[js-data-slot="footer"]`,
+      `<a href="/impressum.html#impressum">Impressum</a>
+    <span class="copyright">© Linus Bolls ${new Date().getFullYear()}</span>
+    <a href="/impressum.html#datenschutz">Datenschutz</a>`
+    );
   }
   function initHeader() {
-    const headerEl = document.querySelector(`[js-data-slot="header"]`);
-    if (!headerEl) return;
-
-    headerEl.innerHTML = `<a href="/" class="header__logo"
-      ><img src="/gallery/logo.png" alt="Puzzles Logo"/>
-      <h2>PUZZLES</h2>
-    </a>
-    <navbar class="header__navbar">
-      <a href="/#events">Events</a>
-      <a href="/#anfahrt">Anfahrt</a>
-      <a href="/#preise">Preise</a>
-      <a href="/#kontakt">Kontakt</a>
-      <a href="/#zeiten">Öffnungszeiten</a>
-    </navbar>
-    <div class="header__menuButton">
-      <button class="button invis square icon menuButton">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-    <div class="flyoutShadow"></div>
-    <div class="flyoutMenu flyoutMenu--closed">
-      <a href="/" class="logo"><img src="/gallery/logo.png" alt="Puzzles Logo"/></a>
-      <a href="/#events">Events</a>
-      <a href="/#anfahrt">Anfahrt</a>
-      <a href="/#preise">Preise</a>
-      <a href="/#kontakt">Kontakt</a>
-      <a href="/#zeiten">Öffnungszeiten</a>
-      <a href="/impressum.html#impressum">Impressum</a>
-      <a href="/impressum.html#datenschutz">Datenschutz</a>
-      <span class="copyright">© Linus Bolls 2021</span>
-    </div>`;
+    const headerExists = fillSlot(
+      `[js-data-slot="header"]`,
+      `<a href="/" class="header__logo"
+    ><img src="/gallery/logo.png" alt="Puzzles Logo"/>
+    <h2>PUZZLES</h2>
+  </a>
+  <navbar class="header__navbar">${navLinks}</navbar>
+  <div class="header__menuButton">
+    <button class="button invis square icon menuButton">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+  <div class="flyoutShadow"></div>
+  <div class="flyoutMenu flyoutMenu--closed">
+    <a href="/" class="logo"><img src="/gallery/logo.png" alt="Puzzles Logo"/></a>
+    ${navLinks}
+    <footer js-data-slot="footer"></footer>
+  </div>`
+    );
+    if (!headerExists) return;
 
     let isAtTop = true;
     const scrollListener = () => {
@@ -78,9 +76,6 @@
     document.onscroll = scrollListener;
   }
   function initGallery() {
-    const galleryEl = document.querySelector(`[js-data-slot="gallery"]`);
-    if (!galleryEl) return;
-
     const galleryColumns = [
       [
         ["img_10.jpg", "Bar"],
@@ -94,16 +89,16 @@
         ["img_20.jpg", "Blue Light Bereich"],
       ],
       [
-        ["img_17.jpg", "Massagestuhl"],
-        ["img_15.jpg", "Umkleideraum"],
+        ["img_25.jpg", "Massagestuhl"],
         ["img_5.jpg", "Wohnzimmer"],
+        ["img_3.jpg", "Wohnzimmer"],
         ["img_18.jpg", "Blue Light Bereich"],
       ],
       [
         ["img_17.jpg", "Massagestuhl"],
         ["img_15.jpg", "Umkleideraum"],
-        ["img_5.jpg", "Wohnzimmer"],
-        ["img_18.jpg", "Blue Light Bereich"],
+        ["img_24.jpg", "Thing"],
+        ["img_14.jpg", "Puzzles Logo"],
       ],
     ];
     const galleryImg = ([path, desc]) =>
@@ -116,8 +111,11 @@
       ${column.map(galleryImg).join("")}
     </div>`;
 
-    galleryEl.innerHTML = galleryColumns.map(galleryColumn).join("");
-    baguetteBox.run(".gallery");
+    const galleryExists = fillSlot(
+      `[js-data-slot="gallery"]`,
+      galleryColumns.map(galleryColumn).join("")
+    );
+    if (galleryExists) baguetteBox.run(".gallery");
   }
   window.onload = () => {
     initHeader();
