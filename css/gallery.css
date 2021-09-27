@@ -35,11 +35,11 @@
 }
 .gallery__column img {
   position: relative;
-  transition-duration: 0.2s;
+  transition-duration: 0.5s;
   vertical-align: middle;
   width: 100%;
   box-shadow: 0 0 2rem 0 rgba(0, 0, 0, 0.3);
 }
 .gallery__column img:hover {
-  transform: scale(1.1) rotate(1deg);
+  transform: scale(1.1);
 }
