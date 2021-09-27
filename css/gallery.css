@@ -1,11 +1,17 @@
 .gallery {
   padding-top: 5rem;
   width: calc(100% - var(--sidePadding));
-  max-width: 42rem;
   display: grid;
   margin: auto;
   grid-gap: 0.5rem;
   grid-template-areas: "c0 c1 c2 c3";
+
+  max-width: var(--wideMaxWidth);
+}
+@media screen and (min-width: 46rem) {
+  .gallery__column a:last-child {
+    display: none;
+  }
 }
 @media screen and (max-width: 46rem) {
   .gallery {

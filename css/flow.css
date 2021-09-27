@@ -1,0 +1,50 @@
+.doubleContent *,
+.content {
+  max-width: var(--textMaxWidth);
+}
+.content {
+  margin: auto;
+  position: relative;
+  width: calc(100% - var(--sidePadding));
+}
+.doubleContent {
+  margin: auto;
+  position: relative;
+  width: calc(100% - var(--sidePadding));
+  display: grid;
+  grid-gap: 3rem;
+  grid-template-areas: "slot0 slot1";
+}
+.doubleContent :nth-child(1) {
+  grid-area: slot0;
+}
+.doubleContent :nth-child(2) {
+  grid-area: slot1;
+}
+.doubleContent p {
+  margin: 0;
+}
+.doubleContent .header {
+  padding-top: 0;
+}
+.doubleContent img {
+  margin: auto;
+  width: 100%;
+}
+@media screen and (min-width: 46rem) {
+  .doubleContent {
+    max-width: var(--wideMaxWidth);
+  }
+  .doubleContent * {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 46rem) {
+  .doubleContent {
+    grid-template-areas: "slot0" "slot1";
+    max-width: var(--textMaxWidth);
+  }
+  .doubleContent img {
+    width: 67% !important;
+  }
+}

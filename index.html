@@ -8,56 +8,28 @@
     <link rel="stylesheet" href="/css/flyout.css" />
     <link rel="stylesheet" href="/css/button.css" />
     <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/gallery.css" />
+    <link rel="stylesheet" href="/css/flow.css" />
     <link rel="shortcut icon" href="/gallery/logo.png" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puzzles - Adult Entertainment Club</title>
+    <meta name="description" content="A club and bar with erotic ambience for lovers of all kinks and sexualities">
   </head>
   <body>
-    <div class="header">
-      <a href="/" class="header__logo"
-        ><img src="/gallery/logo.png" alt="Puzzles Logo"/>
-        <h2>PUZZLES</h2>
-      </a>
-      <navbar class="header__navbar">
-        <a href="/events">Events</a>
-        <a href="/anfahrt">Anfahrt</a>
-        <a href="/preise">Preise</a>
-        <a href="/kontakt">Kontakt</a>
-        <a href="/zeiten">Öffnungszeiten</a>
-      </navbar>
-      <div class="header__menuButton">
-        <button class="button invis square icon menuButton">
-          <span></span>
-          <span></span>
-          <span></span>
-        </button>
-      </div>
-      <div class="flyoutShadow"></div>
-      <div class="flyoutMenu flyoutMenu--closed">
-        <a href="/" class="logo"><img src="/gallery/logo.png" alt="Puzzles Logo"/></a>
-        <a href="/events">Events</a>
-        <a href="/anfahrt">Anfahrt</a>
-        <a href="/preise">Preise</a>
-        <a href="/kontakt">Kontakt</a>
-        <a href="/impressum">Impressum</a>
-        <a href="/zeiten">Öffnungszeiten</a>
-        <span class="copyright">© Linus Bolls 2021</span>
-      </div>
-    </div>
+    <div class="header" js-data-slot="header"></div>
     <div class="page">
       <div class="welcomePanel">
         <h1>Besser denn je</h1>
         Wir sind das neue PUZZLES, das viele von euch unter dem Namen Mystery
-        kennen. <br />PUZZLES haben wir renoviert, schön gemacht und viele
+        kennen. PUZZLES haben wir renoviert, schön gemacht und viele
         Vorlieben berücksichtigt - von zart bis hart ;) </br>Für euch zarten bieten
-        wir edle, gemütliche und romantische Athmosphären. </br>Für euch harten
-        bieten wir jede Menge um Fantasien auszuleben.
+        wir edle, gemütliche und romantische Athmosphären, für euch harten jede Menge um Fantasien auszuleben.
       </div>
       <div class="doubleContent">
         <section>
-          <h2>News</h2>
+          <h2 id="news">News</h2>
           Die Eröffnung folgt auf Grund der aktuellen Situation wie folgt auf
           der 2G Reglung. Das heißt, ihr müsst entweder geimpft oder genesen
           sein. Dazu reicht eine Bescheinigung, ein Impfausweis oder ein
@@ -66,13 +38,13 @@
           Hier könnt ihr das Hygienekonzept als PDF runterladen oder ansehen
         </section>
         <section>
-          <h2>Events</h2>
+          <h2 id="events">Events</h2>
           Große Eröffnungs- und Willkommensparty am 01. und 02. Oktober nach
           der 2G Regel (OHNE NACHWEIS KEIN EINLASS!)
         </section>
       </div>
-      <section class="content" style="top: 3rem">
-        <h2>Hausordnung</h2>
+      <section class="content" style="margin: 3rem auto">
+        <h2 id="hausordnung">Hausordnung</h2>
         Der oberste Grundsatz lautet: NEIN heißt NEIN! Wenn jemand etwas nicht
         mag und bestimmte Praktiken und/oder Personen ablehnt, so ist das ohne
         Diskussion zu respektieren. Wie in jedem guten Club wird auch bei uns
@@ -88,10 +60,44 @@
         Getränken in Flaschen oder Gläsern ist aus diesem Grund untersagt.
         Dresscode versteht sich von selbst.
       </section>
-      <div class="gallery"></div>
-      <div class="doubleContent googleMap">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.8039497624495!2d9.980243015667442!3d53.471963780005524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b191c82a490b0f%3A0xb489202d8ede8296!2sLauenbruch%20Ost%201%2C%2021079%20Hamburg!5e0!3m2!1sen!2sde!4v1629901855627!5m2!1sen!2sde" width="400" height="250" allowfullscreen="" loading="lazy"></iframe>
+      <div class="doubleContent">
         <section>
+          <h2 id="zeiten">Öffnungszeiten ab Oktober</h2>
+           Dienstag und Mittwoch 18:00 - 00:00 Uhr <br>
+           Donnerstag - After work - 17:00 bis 23:00 Uhr <br>
+           Freitag 19:30 - 2:00 Uhr <br>
+           Samstag 19:30 - 3:00 Uhr <br>
+         </section>
+        <section>
+          <h2 id="preise">Preise</h2>
+          <table>
+            <tbody>
+              <tr>
+                <th><b>Wochentag</b></th>
+                <th><b>Damen</b></th>
+                <th><b>Paare</b></th>
+                <th><b>Herren</b></th>
+              </tr>
+              <tr>
+                <td>Dienstag</td>
+                <td>15,- €</td>
+                <td>50,- €</td>
+                <td>65,- €</td>
+              </tr>
+              <tr>
+                <td>Mi - Sa</td>
+                <td>20,- €</td>
+                <td>60,- €</td>
+                <td>80,- €</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+      <div class="gallery" js-data-slot="gallery" id="gallery"></div>
+      <div class="doubleContent googleMap">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2374.8039497624495!2d9.980243015667442!3d53.471963780005524!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b191c82a490b0f%3A0xb489202d8ede8296!2sLauenbruch%20Ost%201%2C%2021079%20Hamburg!5e0!3m2!1sen!2sde!4v1629901855627!5m2!1sen!2sde" width="400" height="250" allowfullscreen="" loading="lazy" id="anfahrt"></iframe>
+        <section id="kontakt">
           <b>
         Verein für Kommunikation und Freizeitgestaltung e.V. <br>
         Lauenbruch Ost 1 <br>
@@ -102,6 +108,7 @@
           E-Mail: <a href="mailto:info@club-puzzles.de" target="_blank">info@club-puzzles.de</a>
         </section>
       </div>
+      <footer js-data-slot="footer"></footer>
     </div>
   </body>
 </html>
